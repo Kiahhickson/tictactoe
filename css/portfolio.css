@@ -1,0 +1,7 @@
+.bubble {
+	position: absolute;
+	border: 3px solid pink;
+	border-radius: 50%;
+	width: 2em;
+	height: 2em;
+}
