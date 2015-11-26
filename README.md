@@ -15,7 +15,7 @@ My initial approach was to get started on how my game will look visually. I bega
 
 My X and O characters, header image and player titles are png files of the selected font I like. I created these in photoshop.
 
-I would have liked to include an AI component of this game however I struggled to work the logic behind this. I also had ideas for including an event handler onClick to create a sound when a table element was clicked, however I decided this would be annoying and my lack of knowledge and ability to grasp the above concepts most likely dissuaded me from pursuing this further. 
+I would have liked to include an AI component of this game however I struggled to work the logic behind this. I also had ideas for including an event handler onClick to create a sound when a table element was clicked, however I decided this would be annoying*** and my lack of knowledge and ability to grasp the above concepts most likely dissuaded me from pursuing this further. 
 
 Furthermore, I wanted to add an overlay of a flock of butterflies to impress Joel, but I guess I am just not really impressive.. So Joel missed out this time around.. 
 
@@ -26,6 +26,10 @@ Both Jack and Joel gave the greatest amount of guidance to my Project 0 - so tha
 I made Joel a thank you gif(t)... I hope he likes it.
 
 On reflection - this wasn't too easy for me and I definitely focused more on the HTML/ CSS components on this project. It may not be the best - code wise but it is pretty :).
+
+UPDATE
+
+***I have now included sound elements to my 'win', 'draw' and 'lose' alerts as at 27th November 2015. Angie NG showed me how simple the code was and Jack helped me find the instructions on MDN and Github. 
 
 - Kiah.
 
