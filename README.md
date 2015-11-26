@@ -11,9 +11,9 @@ I used the following technologies:
 3. CSS; and
 4. HTML.
 
-My initial approach was to get started on how my game will look visually. I began by choosing the visual aspects such as background and font style and then created a table. 
+My initial approach was to get started on how my game will look visually. I began by choosing the visual aspects such as background and font style and then created a table that will encase my noughts and crosses. 
 
-My X and O characters, header image and player titles are png files of the selected font I like.
+My X and O characters, header image and player titles are png files of the selected font I like. I created these in photoshop.
 
 I would have liked to include an AI component of this game however I struggled to work the logic behind this. I also had ideas for including an event handler onClick to create a sound when a table element was clicked, however I decided this would be annoying and my lack of knowledge and ability to grasp the above concepts most likely dissuaded me from pursuing this further. 
 
@@ -25,7 +25,7 @@ Both Jack and Joel gave the greatest amount of guidance to my Project 0 - so tha
 
 I made Joel a thank you gif(t)... I hope he likes it.
 
-On reflection - this wasn't too easy for me and I definitely focused more on the HTML/ CSS components on this project. It may not be the best code wise but it is pretty :).
+On reflection - this wasn't too easy for me and I definitely focused more on the HTML/ CSS components on this project. It may not be the best - code wise but it is pretty :).
 
 - Kiah.
 
