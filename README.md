@@ -2,6 +2,8 @@
 
 Welcome to my Tic Tac Toe game. 
 
+http://kiahhickson.github.io/tictactoe/
+
 I used the following technologies:
 
 1. Javascript;
