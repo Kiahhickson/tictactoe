@@ -15,96 +15,95 @@ var drawGame = 0;
 var checkForWin = function(){
 
 	console.log( oWins )
+
 //Across rows
 
-	if ( $("td").eq(0).hasClass("x") && $("td").eq(1).hasClass("x") && $("td").eq(2).hasClass("x") ) {
+if ( $("td").eq(0).hasClass("x") && $("td").eq(1).hasClass("x") && $("td").eq(2).hasClass("x") ) {
+			alert( "X is the winner" );
+			xWins += 1;
+
+} else if ( $("td").eq(3).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(5).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
+} else if ( $("td").eq(6).hasClass("x") && $("td").eq(7).hasClass("x") && $("td").eq(8).hasClass("x") ) {
   			alert( "X is the winner" );
   			xWins += 1;
 
-	} else if ( $("td").eq(3).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(5).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
-	} else if ( $("td").eq(6).hasClass("x") && $("td").eq(7).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+// Down columns
 
-	// Down columns
+} else if ( $("td").eq(0).hasClass("x") && $("td").eq(3).hasClass("x") && $("td").eq(6).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
 
-	} else if ( $("td").eq(0).hasClass("x") && $("td").eq(3).hasClass("x") && $("td").eq(6).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+} else if ( $("td").eq(1).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(7).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
 
-	} else if ( $("td").eq(1).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(7).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+} else if ( $("td").eq(2).hasClass("x") && $("td").eq(5).hasClass("x") && $("td").eq(8).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
 
-	} else if ( $("td").eq(2).hasClass("x") && $("td").eq(5).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+// Diagonally 
 
-	// Diagonally 
+} else if ( $("td").eq(0).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(8).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
 
-	} else if ( $("td").eq(0).hasClass("") && $("td").eq(4).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+} else if ( $("td").eq(2).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(6).hasClass("x") ) {
+  			alert( "X is the winner" );
+  			xWins += 1;
 
-	} else if ( $("td").eq(2).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(6).hasClass("x") ) {
-	  			alert( "X is the winner" );
-	  			xWins += 1;
+} else if ( $("td").eq(0).hasClass("o") && $("td").eq(1).hasClass("o") && $("td").eq(2).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	  	// } else if 
-	  	// 	console.log("It's a tie");
-  	} else if ( $("td").eq(0).hasClass("o") && $("td").eq(1).hasClass("o") && $("td").eq(2).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else if ( $("td").eq(3).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(5).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(3).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(5).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else if ( $("td").eq(6).hasClass("o") && $("td").eq(7).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(6).hasClass("o") && $("td").eq(7).hasClass("o") && $("td").eq(8).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+// Down columns
 
-	// Down columns
+} else if ( $("td").eq(0).hasClass("o") && $("td").eq(3).hasClass("o") && $("td").eq(6).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(0).hasClass("o") && $("td").eq(3).hasClass("o") && $("td").eq(6).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else if ( $("td").eq(1).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(7).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(1).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(7).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else if ( $("td").eq(2).hasClass("o") && $("td").eq(5).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(2).hasClass("o") && $("td").eq(5).hasClass("o") && $("td").eq(8).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+  // Diagonally 
 
-	  // Diagonally 
+} else if ( $("td").eq(0).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(0).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(8).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else if ( $("td").eq(2).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(6).hasClass("o") ) {
+  			alert( "O is the winner" );
+  			oWins += 1;
 
-	} else if ( $("td").eq(2).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(6).hasClass("o") ) {
-	  			alert( "O is the winner" );
-	  			oWins += 1;
+} else {
+	var $tds = $("td"); // Stores all of the tds (so we can loop through them)
+	var count = 0; // This sets up a starting point
 
-	} else {
-		var $tds = $("td"); // Stores all of the tds (so we can loop through them)
-		var count = 0; // This sets up a starting point
-
-		$tds.each(function () { // We go through each td, and the current td is stored as this
-			if ( $(this).hasClass("x") || $(this).hasClass("o") ) { // If the current td has the class of "x" or of "o"
-		    	count++; // Add one to count, otherwise do nothing
-			}
-		});	
-
-		if ( count === 9 ) { // After the loop, if the count is 9 - it means that every td has been clicked
-			var drawGame = alert( "It's a draw!" ); // Which means it is a draw
-			drawGame += 1;
+	$tds.each(function () { // We go through each td, and the current td is stored as this
+		if ( $(this).hasClass("x") || $(this).hasClass("o") ) { // If the current td has the class of "x" or of "o"
+	    	count++; // Add one to count, otherwise do nothing
 		}
+	});	
+
+	if ( count === 9 ) { // After the loop, if the count is 9 - it means that every td has been clicked
+		var drawGame = alert( "It's a draw!" ); // Which means it is a draw
+		drawGame += 1;
 	}
+}
 
 // 	if ( !oWins) {
 // 	debugger;
