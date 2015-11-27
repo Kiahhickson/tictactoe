@@ -1,16 +1,23 @@
-body {
-
-background-color: black;
-width: 300px;
-height: 100%;
-background: url("https://cdna.lystit.com/photos/7000-2014/03/27/givenchy-black-floral-collage-print-pencil-skirt-product-1-18738584-1-057685425-normal.jpeg") #000 no-repeat 50% 50%;
+html {
+	background: url("https://cdna.lystit.com/photos/7000-2014/03/27/givenchy-black-floral-collage-print-pencil-skirt-product-1-18738584-1-057685425-normal.jpeg") #000 no-repeat 50% 50%;
 background-size: cover;
 
 }
 
+body {
+
+/*background-color: black;*/
+width: 300px;
+height: 100%;
+backg/*round: url("https://cdna.lystit.com/photos/7000-2014/03/27/givenchy-black-floral-collage-print-pencil-skirt-product-1-18738584-1-057685425-normal.jpeg") #000 no-repeat 50% 50%;
+background-size: cover;*/
+
+}
+
+
 .header img {
 
-height: 60vh;
+/*height: 60vh;*/
 width: 80vw;
 padding-left: 45%;
 padding-right: 45%;
@@ -88,7 +95,7 @@ float: right;
 #container {
 
 width: 100vw;
-height: 58vh;
+/*height: 58vh;*/
 
 }
 

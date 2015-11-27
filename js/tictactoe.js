@@ -6,11 +6,62 @@
 	// You need to create a big if statement
 	// You need to call that every time changeTurn is run
 
+var joelFly = document.getElementsByTagName('img')[0];
+	joelFly.style.position = 'absolute';
+	joelFly.style.left = '-300px';
+
+var fwdJoelFly;
+
+var joelFlyWalk = function() {
+
+  var oldLeft = parseInt(joelFly.style.left);
+  var joelWalk = oldLeft + 8;
+  	joelFly.style.left = joelWalk + 'px';
+
+ if(joelWalk > window.innerWidth) {
+    joelFly.style.transform = 'scaleX(-1)';
+    window.clearInterval(fwdJoelFly);
+    walkBack();
+  }
+};
+
+var revJoelFly;
+
+var joelFlyWalkBack = function() {
+
+  var oldLeft = parseInt(joelFly.style.left);
+  var joelWalk = oldLeft - 8; 
+  	joelFly.style.left = joelWalk + 'px';
+
+ if(joelWalk < 0) {
+    joelFly.style.transform = 'scaleX(1)';
+    window.clearInterval(revJoelFly);
+    $(".fwdJoelFly,.revJoelFly").removeClass("fwdJoelFly").removeClass("revJoelFly");
+    walkForward();
+
+  } 
+
+}
+
+var walkForward = function () {
+  fwdJoelFly = setInterval(joelFlyWalk, 80);
+}
+
+var walkBack = function () {
+  revJoelFly = setInterval(joelFlyWalkBack, 80);
+}
+
+walkForward();
+
+
 var xWins = 0;
 var oWins = 0;
 var drawGame = 0;
 
 
+var myWinSound = new Audio("Ta Da-SoundBible.com-1884170640.mp3");
+var myDrawSound = new Audio("Pc_says_i_love_you-Jack-1485526432.mp3");
+var myLoseSound = new Audio("Uuuuuu-Paula-1357936016 (1).mp3");
 
 var checkForWin = function(){
 
@@ -19,73 +70,93 @@ var checkForWin = function(){
 //Across rows
 
 if ( $("td").eq(0).hasClass("x") && $("td").eq(1).hasClass("x") && $("td").eq(2).hasClass("x") ) {
+			myWinSound.play();
 			alert( "X is the winner" );
 			xWins += 1;
 
 } else if ( $("td").eq(3).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(5).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
+
 } else if ( $("td").eq(6).hasClass("x") && $("td").eq(7).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
 
 // Down columns
 
 } else if ( $("td").eq(0).hasClass("x") && $("td").eq(3).hasClass("x") && $("td").eq(6).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
 
 } else if ( $("td").eq(1).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(7).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
 
 } else if ( $("td").eq(2).hasClass("x") && $("td").eq(5).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
 
 // Diagonally 
 
 } else if ( $("td").eq(0).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(8).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
 
 } else if ( $("td").eq(2).hasClass("x") && $("td").eq(4).hasClass("x") && $("td").eq(6).hasClass("x") ) {
-  			alert( "X is the winner" );
-  			xWins += 1;
+  			myWinSound.play();
+			alert( "X is the winner" );
+			xWins += 1;
+
+
+//Across rows
 
 } else if ( $("td").eq(0).hasClass("o") && $("td").eq(1).hasClass("o") && $("td").eq(2).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 } else if ( $("td").eq(3).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(5).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 } else if ( $("td").eq(6).hasClass("o") && $("td").eq(7).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 // Down columns
 
 } else if ( $("td").eq(0).hasClass("o") && $("td").eq(3).hasClass("o") && $("td").eq(6).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 } else if ( $("td").eq(1).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(7).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 } else if ( $("td").eq(2).hasClass("o") && $("td").eq(5).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
   // Diagonally 
 
 } else if ( $("td").eq(0).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(8).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
 } else if ( $("td").eq(2).hasClass("o") && $("td").eq(4).hasClass("o") && $("td").eq(6).hasClass("o") ) {
+  			myLoseSound.play();
   			alert( "O is the winner" );
   			oWins += 1;
 
@@ -100,7 +171,8 @@ if ( $("td").eq(0).hasClass("x") && $("td").eq(1).hasClass("x") && $("td").eq(2)
 	});	
 
 	if ( count === 9 ) { // After the loop, if the count is 9 - it means that every td has been clicked
-		var drawGame = alert( "It's a draw!" ); // Which means it is a draw
+		var drawGame = myDrawSound.play();
+		alert( "It's a draw!" ); // Which means it is a draw
 		drawGame += 1;
 	}
 }
@@ -138,7 +210,12 @@ var createImage = function () {
 }
 
 var playTurn = function () {
-	console.log( this );
+
+	if ( $(this).hasClass("x") || $(this).hasClass("o") ) {
+		return false;
+	}
+
+	console.log( $(this).text() );
 	console.log( currentPlayer );
 
 	$(this).html( createImage() );
